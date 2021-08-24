@@ -1,6 +1,13 @@
 name: Build Docker Image
 
 on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - .gitignore
+      - README.md
+      - LICENSE
   workflow_dispatch:
 
 jobs:
