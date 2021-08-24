@@ -1,4 +1,4 @@
-FROM almalinux
+FROM centos:7
 MAINTAINER andycruose@gmail.com
 
 #设置entrypoint和letsencrypt映射到www文件夹下持久化
