@@ -19,7 +19,7 @@ RUN cd /home \
     && yum -y install wget openssh-server \
     && echo 'Port 63322' > /etc/ssh/sshd_config \
     && wget -O install_panel.sh http://download.bt.cn/install/install_panel.sh \
-    && echo y | bash install_panel.sh \
+    && echo yes | bash install_panel.sh \
     && python /set_default.py \
     && echo '["linuxsys", "webssh"]' > /www/server/panel/config/index.json \
     && yum clean all
