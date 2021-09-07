@@ -19,8 +19,7 @@
     echo "***** /www/server/panel directory is empty. install panel*****" 
     cd /tmp 
     wget -O install_panel.sh http://download.bt.cn/install/install_panel.sh 
-    mkdir /www/init.d 
-    echo yes | bash install_panel.sh 
+    echo yes | sh install_panel.sh 
     yum clean all
   fi;
 
