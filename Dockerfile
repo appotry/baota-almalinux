@@ -10,7 +10,7 @@ COPY entrypoint.sh /entrypoint.sh
 #    curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo 
 
 RUN chmod +x /entrypoint.sh && \
-    mkdir -p /www/wwwroot
+    mkdir -p /www
     
 #更新系统 安装工具
 #RUN yum -y update && \
@@ -18,7 +18,7 @@ RUN chmod +x /entrypoint.sh && \
 RUN yum  update
 RUN yum -y install wget openssh-server
 
-WORKDIR /www/wwwroot
+WORKDIR /www
 
 # Build a base server and configuration if it doesnt exist, then start
 CMD \
