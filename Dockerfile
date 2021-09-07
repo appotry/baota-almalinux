@@ -4,7 +4,6 @@ MAINTAINER andycruose@gmail.com
 #设置entrypoint
 COPY entrypoint.sh /entrypoint.sh
 
-#RUN curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo 
 RUN chmod +x /entrypoint.sh && \
     mkdir -p /www
     
@@ -12,8 +11,6 @@ RUN chmod +x /entrypoint.sh && \
 RUN curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo  && \
     yum -y update && \
     yum -y install wget openssh-server
-#RUN yum  -y update
-#RUN yum -y install wget openssh-server
 
 WORKDIR /www
 
