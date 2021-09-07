@@ -4,7 +4,8 @@ MAINTAINER andycruose@gmail.com
 #设置entrypoint
 COPY entrypoint.sh /entrypoint.sh
 
-RUN curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo && \
+RUN yum install curl && \
+    curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo && \
     yum makecache
 
 RUN chmod +x /entrypoint.sh && \
