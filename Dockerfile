@@ -46,7 +46,7 @@ CMD \
     echo "***** /www/server/mysql directory exists and has content, continuing *****"; \
   else \
     echo "***** /www/server/mysql directory is empty. install mariadb_10.3 *****" && \
-    RUN bash /www/server/panel/install/install_soft.sh 0 install mysql mariadb_10.3 \
+    bash /www/server/panel/install/install_soft.sh 0 install mysql mariadb_10.3 \
   fi; \
   /entrypoint.sh
   
