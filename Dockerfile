@@ -15,8 +15,8 @@ RUN chmod +x /entrypoint.sh && \
 #更新系统 安装工具
 #RUN yum -y update && \
 #    yum -y install wget openssh-server
-RUN yum  update
-RUN yum install wget openssh-server
+RUN yum  -y update
+RUN yum -y install wget openssh-server
 
 WORKDIR /www
 
