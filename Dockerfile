@@ -13,7 +13,7 @@ RUN chmod +x /entrypoint.sh && \
     
 #更新系统 安装工具
 RUN yum -y update && \
-    yum -y install wget curl vim openssh-server
+    yum -y install wget openssh-server
 
 WORKDIR /www/wwwroot
 
