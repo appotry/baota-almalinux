@@ -6,8 +6,7 @@ COPY entrypoint.sh /entrypoint.sh
 
 RUN yum -y update && \
     yum -y install curl && \
-    curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo && \
-    yum makecache
+    curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo 
 
 RUN chmod +x /entrypoint.sh && \
     mkdir -p /www/wwwroot
