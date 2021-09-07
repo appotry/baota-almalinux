@@ -9,8 +9,8 @@ RUN curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Cen
 #    yum -y install curl && \
 #    curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo 
 
-RUN chmod +x /entrypoint.sh && \
-    mkdir -p /www/wwwroot
+#RUN chmod +x /entrypoint.sh && \
+#    mkdir -p /www/wwwroot
     
 #更新系统 安装工具
 RUN yum -y update && \
