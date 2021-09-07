@@ -8,11 +8,10 @@
   if [ "$(ls -A /www/init.d)" ]; then 
     echo "***** /www/init.d directory exists and has content, continuing *****"; 
   else 
-    echo "***** /www/init.d directory is empty *****" 
+    echo "***** /www/init.d directory is empty. init.d 映射到www文件夹下持久化*****" 
     rm -f /etc/init.d 
     mkdir /www/init.d 
     ln -s /www/init.d /etc/init.d 
-    ln -s /www/letsencrypt /etc/letsencrypt 
   fi;
   if [ "$(ls -A /www/server/panel)" ]; then 
     echo "***** /www/server/panel directory exists and has content, continuing *****"; 
